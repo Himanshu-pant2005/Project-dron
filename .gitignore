@@ -1,0 +1,13 @@
+# Godot
+game/dron/.godot/
+*.translation
+
+# Python
+backend/.env
+backend/venv/
+__pycache__/
+*.pyc
+*.db
+
+# OS
+Thumbs.db
