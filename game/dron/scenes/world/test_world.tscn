@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bu6y7witetwsy"]
 
+[ext_resource type="PackedScene" uid="uid://bfxg785w373rj" path="res://scenes/player/player.tscn" id="1_tjl6x"]
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_avpup"]
 
 [sub_resource type="Sky" id="Sky_dr72x"]
@@ -36,3 +38,5 @@ shape = SubResource("BoxShape3D_cdfdh")
 
 [node name="TempCamera" type="Camera3D" parent="." unique_id=2098221369]
 transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 3, 8)
+
+[node name="Player" parent="." unique_id=318843571 instance=ExtResource("1_tjl6x")]
