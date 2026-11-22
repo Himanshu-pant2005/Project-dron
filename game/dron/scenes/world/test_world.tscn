@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bu6y7witetwsy"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_avpup"]
+
+[sub_resource type="Sky" id="Sky_dr72x"]
+sky_material = SubResource("ProceduralSkyMaterial_avpup")
+
+[sub_resource type="Environment" id="Environment_cdfdh"]
+background_mode = 2
+sky = SubResource("Sky_dr72x")
+ambient_light_source = 3
+
+[sub_resource type="BoxMesh" id="BoxMesh_cdfdh"]
+size = Vector3(40, 1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cdfdh"]
+size = Vector3(40, 1, 40)
+
+[node name="TestWorld" type="Node3D" unique_id=750732711]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1116205931]
+environment = SubResource("Environment_cdfdh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1450582781]
+transform = Transform3D(0.8660254, 0.38302222, -0.32139382, 0, 0.64278764, 0.76604444, 0.5, -0.66341394, 0.5566704, 0, 0, 0)
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1812198012]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1668518556]
+transform = Transform3D(0.9999619, 0, -0.008726535, 0, 1, 0, 0.008726535, 0, 0.9999619, 0, 0, 0)
+mesh = SubResource("BoxMesh_cdfdh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1129014946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_cdfdh")
+
+[node name="TempCamera" type="Camera3D" parent="." unique_id=2098221369]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 3, 8)
